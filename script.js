@@ -1,4 +1,5 @@
-let goals = [];
+// Initialisation des objectifs depuis le localStorage ou un tableau vide
+let goals = JSON.parse(localStorage.getItem('goals')) || [];
 
 // Fonction pour ajouter un objectif
 function addGoal() {
@@ -8,6 +9,7 @@ function addGoal() {
     if (newGoal) {
         goals.push({ text: newGoal, completed: false });
         input.value = ''; // Reset le champ
+        saveGoals(); // Sauvegarder les objectifs dans le localStorage
         renderGoals(); // Rafraîchir la liste
     }
 }
@@ -15,6 +17,7 @@ function addGoal() {
 // Fonction pour marquer/unmarquer comme accompli
 function toggleCompletion(index) {
     goals[index].completed = !goals[index].completed;
+    saveGoals(); // Sauvegarder les objectifs dans le localStorage
     renderGoals();
 }
 
@@ -63,5 +66,14 @@ function renderGoals() {
 // Fonction pour supprimer un objectif
 function deleteGoal(index) {
     goals.splice(index, 1); // Supprime l'objectif
+    saveGoals(); // Sauvegarder les objectifs dans le localStorage
     renderGoals(); // Rafraîchit la liste
 }
+
+// Fonction pour sauvegarder les objectifs dans le localStorage
+function saveGoals() {
+    localStorage.setItem('goals', JSON.stringify(goals));
+}
+
+// Charger les objectifs lors du chargement de la page
+document.addEventListener('DOMContentLoaded', renderGoals);
