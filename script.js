@@ -77,3 +77,4 @@ function saveGoals() {
 
 // Charger les objectifs lors du chargement de la page
 document.addEventListener('DOMContentLoaded', renderGoals);
+
