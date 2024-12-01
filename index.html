@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brain-rot-task-list</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> <h1>task list but </h1><h1 id="norm">skibidi</h1><h1> is watching for you</h1></header>
+    <div id="wrapper"> <!-- Conteneur pour la disposition Flexbox -->
+        <!-- Conteneur pour la liste des objectifs -->
+        <div id="taskList">
+           
+            <div class="add-goal">
+                <input type="text" id="goalInput" placeholder="Write a task">
+                <button onclick="addGoal()">Add</button>
+            </div>
+
+            <ul id="goalList">
+                <!-- Les objectifs seront ajoutés ici -->
+            </ul>
+        </div>
+
+        <!-- Conteneur pour le modèle 3D -->
+        <div id="container3D"></div>
+        <div id="selector">
+            <button id="goblin">goblin</button>
+            <button id="kanye">kayne</button>
+            <button id="shrek">shrek</button>
+            <button id="trump">trump</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

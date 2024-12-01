@@ -1,0 +1,11 @@
+Model Information:
+* title:	Kanye West
+* source:	https://sketchfab.com/3d-models/kanye-west-f68cb5167781492ea2ad881fac3f8bba
+* author:	Nyilonelycompany (https://sketchfab.com/Nyilonelycompany)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Kanye West" (https://sketchfab.com/3d-models/kanye-west-f68cb5167781492ea2ad881fac3f8bba) by Nyilonelycompany (https://sketchfab.com/Nyilonelycompany) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

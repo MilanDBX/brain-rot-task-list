@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+     /* Centre verticalement tout le contenu */
+    justify-content: center; /* Centre horizontalement */
+    height: 100vh;
+    margin: 0;
+}
+header {
+    background-color: #c7bfbf;
+}
+
+#selector {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    width: 15vw;
+    z-index: 10;
+    
+}
+#wrapper {
+    display: flex;
+    height: 80vh; /* Utilisation de 80% de la hauteur pour l'espace */
+    width: 100vw;  /* Utilisation de 80% de la largeur */
+    justify-content: flex-start;
+    
+    flex-direction: row;
+    position: relative; /* Nécessaire pour gérer les z-index */
+}
+
+#taskList {
+    width: 300px; /* Largeur fixe pour la liste */
+    background-color: #ffffff;
+    padding: 20px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    flex-shrink: 0; /* Empêche la liste de se réduire */
+    height: 100%;  /* Prend toute la hauteur disponible */
+    position: relative;
+    z-index: 10; /* La liste des tâches est devant */
+}
+
+#container3D {
+    flex-grow: 1; /* Prend l'espace restant */
+    display: flex;
+    justify-content: center; /* Centre horizontalement le modèle */
+    align-items: center; /* Centre verticalement le modèle */
+    background-color: #ffffff;
+    position: relative;
+    height: 100%; /* Prend toute la hauteur disponible */
+    z-index: 1; /* Le modèle 3D est derrière */
+}
+
+#container3D canvas {
+    width: 80%; /* Le canvas prend 80% de la largeur du conteneur */
+    height: 80%; /* Le canvas prend 80% de la hauteur du conteneur */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centrage absolu */
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.add-goal {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#goalInput {
+    flex: 1;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 8px;
+    background-color: #000;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 1px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: white;
+    color: #000;
+    border: 1px solid #000;
+    border-color: #000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.goal-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 5px;
+}
+
+.delete-btn:hover {
+    color: #555;
+}
